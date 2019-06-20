@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug32</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B25B9856-B2A1-42A1-B7E9-7C7C10199E8C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bengesht</RootNamespace>
+    <AssemblyName>Bengesht</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug32|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GH_IO">
+      <HintPath>C:\Program Files\Common Files\McNeel\Rhinoceros\5.0\Plug-ins\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\0.9.76.0\GH_IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <HintPath>C:\Program Files\Common Files\McNeel\Rhinoceros\5.0\Plug-ins\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\0.9.76.0\Grasshopper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RhinoCommon">
+      <HintPath>C:\Program Files\Rhinoceros 5 (64-bit)\System\RhinoCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BengeshtInfo.cs" />
+    <Compile Include="Curve\CurveComponent.cs" />
+    <Compile Include="FlowControl\Freezer.cs" />
+    <Compile Include="FlowControl\FlowControlComponent.cs" />
+    <Compile Include="FlowControl\ExpireDam.cs" />
+    <Compile Include="Http\HttpHandler.cs" />
+    <Compile Include="Lib\websocket-sharp\ByteOrder.cs" />
+    <Compile Include="Lib\websocket-sharp\CloseEventArgs.cs" />
+    <Compile Include="Lib\websocket-sharp\CloseStatusCode.cs" />
+    <Compile Include="Lib\websocket-sharp\CompressionMethod.cs" />
+    <Compile Include="Lib\websocket-sharp\ErrorEventArgs.cs" />
+    <Compile Include="Lib\websocket-sharp\Ext.cs" />
+    <Compile Include="Lib\websocket-sharp\Fin.cs" />
+    <Compile Include="Lib\websocket-sharp\HttpBase.cs" />
+    <Compile Include="Lib\websocket-sharp\HttpRequest.cs" />
+    <Compile Include="Lib\websocket-sharp\HttpResponse.cs" />
+    <Compile Include="Lib\websocket-sharp\LogData.cs" />
+    <Compile Include="Lib\websocket-sharp\Logger.cs" />
+    <Compile Include="Lib\websocket-sharp\LogLevel.cs" />
+    <Compile Include="Lib\websocket-sharp\Mask.cs" />
+    <Compile Include="Lib\websocket-sharp\MessageEventArgs.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\AuthenticationBase.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\AuthenticationChallenge.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\AuthenticationResponse.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\AuthenticationSchemes.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\Chunk.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\ChunkedRequestStream.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\ChunkStream.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\ClientSslConfiguration.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\Cookie.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\CookieCollection.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\CookieException.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\EndPointListener.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\EndPointManager.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpBasicIdentity.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpConnection.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpDigestIdentity.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpHeaderInfo.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpHeaderType.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpListener.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpListenerAsyncResult.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpListenerContext.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpListenerException.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpListenerPrefix.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpListenerPrefixCollection.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpListenerRequest.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpListenerResponse.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpRequestHeader.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpResponseHeader.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpStatusCode.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpStreamAsyncResult.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpUtility.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\HttpVersion.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\InputChunkState.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\InputState.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\LineState.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\NetworkCredential.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\QueryStringCollection.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\ReadBufferState.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\RequestStream.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\ResponseStream.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\ServerSslConfiguration.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\SslConfiguration.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\WebHeaderCollection.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\WebSockets\HttpListenerWebSocketContext.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\WebSockets\TcpListenerWebSocketContext.cs" />
+    <Compile Include="Lib\websocket-sharp\Net\WebSockets\WebSocketContext.cs" />
+    <Compile Include="Lib\websocket-sharp\Opcode.cs" />
+    <Compile Include="Lib\websocket-sharp\PayloadData.cs" />
+    <Compile Include="Lib\websocket-sharp\Rsv.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\HttpRequestEventArgs.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\HttpServer.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\IWebSocketSession.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\ServerState.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\WebSocketBehavior.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\WebSocketServer.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\WebSocketServiceHost.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\WebSocketServiceHost`1.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\WebSocketServiceManager.cs" />
+    <Compile Include="Lib\websocket-sharp\Server\WebSocketSessionManager.cs" />
+    <Compile Include="Lib\websocket-sharp\WebSocket.cs" />
+    <Compile Include="Lib\websocket-sharp\WebSocketException.cs" />
+    <Compile Include="Lib\websocket-sharp\WebSocketFrame.cs" />
+    <Compile Include="Lib\websocket-sharp\WebSocketState.cs" />
+    <Compile Include="Lib\WiimoteLib\DataTypes.cs" />
+    <Compile Include="Lib\WiimoteLib\Events.cs" />
+    <Compile Include="Lib\WiimoteLib\HIDImports.cs" />
+    <Compile Include="Lib\WiimoteLib\Wiimote.cs" />
+    <Compile Include="Lib\WiimoteLib\WiimoteCollection.cs" />
+    <Compile Include="Math\MathComponent.cs" />
+    <Compile Include="Http\HttpOut.cs" />
+    <Compile Include="Http\HttpIn.cs" />
+    <Compile Include="Curve\AlignCrvSE.cs" />
+    <Compile Include="Curve\AssembleCurves.cs" />
+    <Compile Include="Curve\ClassifyCrvSE.cs" />
+    <Compile Include="Curve\Crv2LnSE.cs" />
+    <Compile Include="Curve\DivCCX.cs" />
+    <Compile Include="Curve\Flip2Pt.cs" />
+    <Compile Include="Curve\StarLn.cs" />
+    <Compile Include="Math\SolarCals.cs" />
+    <Compile Include="Http\NetworkComponent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WsClient\WsAddress.cs" />
+    <Compile Include="WsClient\WsClientComponent.cs" />
+    <Compile Include="WsClient\WsClientRecv.cs" />
+    <Compile Include="WsClient\WsClientSend.cs" />
+    <Compile Include="WsClient\WsClientStart.cs" />
+    <Compile Include="Wii\WiiOut.cs" />
+    <Compile Include="Wii\WiiIn.cs" />
+    <Compile Include="Wii\WiiStart.cs" />
+    <Compile Include="Wii\WiiComponent.cs" />
+    <Compile Include="WsClient\WsObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveAlignCrvSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveAssembleCurves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveCrv2LnSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveDivCCX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mathSolarCals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveFlipToPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curveClassifyCrvSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crvStarLines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\httpIn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WiiIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WiiOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WiiStart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wscStart.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WscRecv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WscSend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WscStart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\httpIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\httpOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expireDam.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)bengesht.gha"
+Erase "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug32|AnyCPU' ">
+    <StartArguments>
+    </StartArguments>
+    <StartAction>Program</StartAction>
+    <StartProgram>D:\Program Files\Rhinoceros 4.0\System\Rhino4.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+</Project>
