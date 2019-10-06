@@ -1,7 +1,7 @@
 # Bengesht
 
 
-Three set of functionalities are available in this plugin:
+The set of functionalities available in this plugin are:
 
 ### WebSocket / Grasshopper as a ROS node:
 These components of Bengesht can handle (send/receive) communication with a server over WebSocket protocol. Using these modules, Grasshopper can be plugged into a ROS based network of parallel processes (Nodes). RosBridge is a ROS package which serves as a WebSocket server on the ROS side.
