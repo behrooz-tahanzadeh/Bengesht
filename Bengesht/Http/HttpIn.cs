@@ -129,7 +129,7 @@ public class HttpIn : HttpComponent
     private void httpHandlerOnChanged(object sender, EventArgs e)
     {
         this.onChangedTriggered = true;
-        this.ExpireSolution(true);
+        Grasshopper.Instances.DocumentEditor.Invoke((Action) delegate() {ExpireSolution(true); });
     }//eof
 
 
